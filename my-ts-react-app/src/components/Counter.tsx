@@ -4,7 +4,7 @@ import React, { useState } from "react";
 type CounterProps = {
   initialValue: number;
 };
-
+// keke
 const Counter: React.FC<CounterProps> = ({ initialValue }) => {
   // useState with type inference (initialValue is number)
   const [count, setCount] = useState<number>(initialValue);
