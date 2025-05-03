@@ -10,3 +10,5 @@ class Counter extends React.Component<Props, State> {
     return <div>{this.props.title}: {this.state.count}</div>;
   }
 }
+
+export default Counter;
