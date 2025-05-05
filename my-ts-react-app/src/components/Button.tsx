@@ -16,26 +16,45 @@
 // }
 
 
+
+// PROPS
 // usage of typingScript in React especially props 
 // on this part if you don't know the type of props but declared at the top you can press Ctrl + Space to see the type of props
-type color = 'red' | 'green' | 'blue' | 'yellow' | 'purple'
+
+// type color = 'red' | 'green' | 'blue' | 'yellow' | 'purple'
+// type ButtonProps = {
+//   backgroundColor: color;
+//   textColor: color
+//   fontSize: number;
+// }
+// export default function Button({
+//   backgroundColor,
+//   textColor,
+//   fontSize}: ButtonProps) {
+//   return(
+//     <button className="bg-blue-500 text-white px-4 py-2 rounded "
+//       style={{
+//         backgroundColor: backgroundColor,
+//         fontSize: fontSize, 
+//         color:textColor,
+//       }}>
+//       Click Me
+//     </button>
+//   );
+// }
+
+
+
+
+// RECORD TYPE // COMBINING CSS PROPS INTO ONE STYLE OBJECT
 type ButtonProps = {
-  backgroundColor: color;
-  textColor: color
-  fontSize: number;
-}
-export default function Button({
-  backgroundColor,
-  textColor,
-  fontSize}: ButtonProps) {
-  return(
-    <button className="bg-blue-500 text-white px-4 py-2 rounded "
-      style={{
-        backgroundColor: backgroundColor,
-        fontSize: fontSize, 
-        color:textColor,
-      }}>
-      Click Me
-    </button>
-  );
+  style : {
+    backgroundColor: string;
+    textColor: string;
+    fontSize: number
+  };
+};
+
+export default function Button({ style }: ButtonProps){   // this line destructures the style object and function has parameter that represent properties and type of the object 
+  return <button style={style} >Click me</button>
 }
