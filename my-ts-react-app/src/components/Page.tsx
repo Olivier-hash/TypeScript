@@ -16,7 +16,7 @@ export default function Home (){
         <main className="min-h-screen flex justfy-center items-center">
             <Button style={{
                 backgroundColor: 'red',
-                textColor: 'white',
+                color: 'white',
                 fontSize: 24,
             }} />
         </main>
