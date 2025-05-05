@@ -17,19 +17,22 @@
 
 
 // usage of typingScript in React especially props 
-
+// on this part if you don't know the type of props but declared at the top you can press Ctrl + Space to see the type of props
+type color = 'red' | 'green' | 'blue' | 'yellow' | 'purple'
 type ButtonProps = {
-  backgroundColor: string;
+  backgroundColor: color;
+  textColor: color
   fontSize: number;
 }
 export default function Button({
   backgroundColor,
+  textColor,
   fontSize}: ButtonProps) {
   return(
     <button className="bg-blue-500 text-white px-4 py-2 rounded "
       style={{
         backgroundColor: backgroundColor,
-        fontSize: `${fontSize}px`,
+        fontSize: `${fontSize}px`, color:textColor,
       }}>
       Click Me
     </button>
