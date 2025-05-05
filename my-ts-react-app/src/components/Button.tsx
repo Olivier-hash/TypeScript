@@ -65,6 +65,7 @@
 //REACT.css PROPERTIES
 type ButtonProps = {
   style : React.CSSProperties;
+//children: React.ReactNode; // React.ReactNode is a union type that includes all of these. That’s why it’s the standard type for children
 };
 
 export default function Button({ style }: ButtonProps){   // this line destructures the style object and function has parameter that represent properties and type of the object 
